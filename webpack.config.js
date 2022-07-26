@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     output: {
@@ -38,6 +39,10 @@ module.exports = {
                         loader: 'postcss-loader'
                     }
                 ]
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'file-loader'
             }
         ],
     },
@@ -45,5 +50,6 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: './src/index.html',
         }),
+        new Dotenv()
     ],
 };
