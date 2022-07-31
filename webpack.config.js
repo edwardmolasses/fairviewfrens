@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const webpack = require('webpack');
 
 module.exports = {
     output: {
@@ -12,6 +13,14 @@ module.exports = {
         alias: {
             react: path.join(__dirname, 'node_modules', 'react'),
         },
+        fallback: {
+            "crypto": require.resolve("crypto-browserify"),
+            "stream": require.resolve("stream-browserify"),
+            "buffer": require.resolve("buffer/"),
+            "http": false,
+            "https": false,
+            "os": false
+        }
     },
     module: {
         rules: [
@@ -50,6 +59,12 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: './src/index.html',
         }),
-        new Dotenv()
+        new Dotenv(),
+        new webpack.ProvidePlugin({
+            Buffer: ['buffer', 'Buffer'],
+        }),
     ],
+    devServer: {
+        historyApiFallback: true,
+    },
 };
