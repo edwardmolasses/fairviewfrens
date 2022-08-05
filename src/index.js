@@ -5,6 +5,7 @@ import './styles/globals.css'
 
 import Home from './Home';
 import Mint from './Mint';
+import PageNotFound from './PageNotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -14,6 +15,7 @@ root.render(
             <Routes>
                 <Route path="/" element={<Home />} />
                 {/* <Route path="mint" element={<Mint />} /> */}
+                <Route path="*" element={<PageNotFound />} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>

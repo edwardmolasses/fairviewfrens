@@ -1,6 +1,5 @@
 import React from 'react';
 import { config } from '../dapp.config'
-import './styles/globals.css'
 import foff from './images/foff.gif'
 import eyes from './images/eyes.png'
 import logo from './images/puddlegoose-outlined-logo.png'
