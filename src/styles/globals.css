@@ -116,7 +116,13 @@ html {
     color: var(--rainbow-text-6);
 }
 
+.text-outline {
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
 
+.text-outline-2x {
+    text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+}
 
 
 
