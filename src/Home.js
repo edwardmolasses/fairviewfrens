@@ -1,10 +1,9 @@
 import React from 'react';
-import { config } from '../dapp.config'
 import foff from './images/foff.gif'
 import eyes from './images/eyes.png'
-import logo from './images/puddlegoose-outlined-logo.png'
 import './styles/globals.css';
-import Header from './Header';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 export default function Home() {
     return (
@@ -72,7 +71,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <img className="mr-2 mt-0 pb-10 sm:mt-20" src={logo} alt="" />
+                    <Footer />
                 </div>
             </div>
         </div>

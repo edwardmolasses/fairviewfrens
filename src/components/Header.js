@@ -1,7 +1,7 @@
 import React from 'react';
-import { config } from '../dapp.config'
+import { config } from '../../dapp.config'
 import { Link } from "react-router-dom";
-import './styles/globals.css';
+import '../styles/globals.css';
 
 export default function Header() {
     return (
